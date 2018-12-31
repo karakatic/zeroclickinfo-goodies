@@ -1,0 +1,115 @@
+{
+	"id": "seaborn_cheat_sheet",
+	"name": "Seaborn",
+	"description": "Statistical data visualization with Seaborn, a Python visualisation library.",
+
+	"metadata": {
+		"sourceName": "Seaborn official API",
+		"sourceUrl": "https://seaborn.pydata.org/api.html"
+	},
+    "aliases": [
+        "seaborn",
+        "seaborn cheat sheet",
+		"seaborn cheatsheet",
+		"seaborn plot",
+		"seaborn python"
+    ],
+	
+	"template_type": "code",
+
+	"section_order": [
+		"Introduction",
+		"Categorical Plots",
+		"Distribution Plots",
+		"Relational and Regression Plots",
+		"Matrix Plots",
+		"Colors"
+	],
+	"sections": {
+		"Introduction": [{
+				"val": "Import Seaborn library and Matplotlib libraries.",
+				"key": "import seaborn as sns\n import matplotlib.pyplot as plt"
+			}, {
+				"val": "Load data.",
+				"key": "tips = sns.load_dataset('tips')"
+			}, {
+				"val": "Set the style of the plot.",
+				"key": "sns.set_style('whitegrid')"
+			}, {
+				"val": "Make a plot.",
+				"key": "g = sns.boxplot(x='day', y='total_bill', data=tips)"
+			}, {
+				"val": "Set the title of the plot.",
+				"key": "plt.title('Title of the plot')"
+			}, {
+				"val": "Show drawn plot in a window.",
+				"key": "plt.show(g)"
+			}, {
+				"val": "Save plot to a file.",
+				"key": "plt.savefig('foo.png', transparent=True)"
+			}, {
+				"val": "Close a window with the plot.",
+				"key": "plt.close()"
+			}
+		],
+		"Categorical Plots": [{
+			"key": "sns.stripplot(x='day', y='total_bill', data=tips);",
+			"val": "Categorical scatterplot where one variable is categorical."
+		}, {
+			"key": "sns.swarmplot(x='day', y='total_bill', data=tips)",
+			"val": "Categorical scatterplot with non-overlapping points."
+		}, {
+			"key": "sns.boxplot(x='day', y='total_bill', data=tips)",
+			"val": "Box plot to show distributions with respect to categories."
+		}, {
+			"key": "sns.violinplot(x='day', y='total_bill', data=tips)",
+			"val": "Combination of boxplot and kernel density estimate."
+		}, {
+			"key": "sns.boxenplot(x='day', y='total_bill', data=tips)",
+			"val": "Enhanced box plot for larger datasets."
+		}, {
+			"key": "sns.pointplot(x='time', y='total_bill', data=tips)",
+			"val": "Show point estimates and confidence intervals using scatter plot glyphs."
+		}, {
+			"key": "sns.barplot(x='day', y='total_bill', data=tips)",
+			"val": "Show point estimates and confidence intervals as rectangular bars."
+		}, {
+			"key": "sns.countplot(x='class', data=titanic)",
+			"val": "Show the counts of observations in each categorical bin using bars."
+		}],
+		"Distribution Plots": [{
+			"key": "sns.pairplot(iris)",
+			"val": "Plot pairwise relationships in a dataset."
+		}, {
+			"key": "sns.distplot(x)",
+			"val": "Flexibly plot a univariate distribution of observations."
+		}, {
+			"key": "sns.jointplot(x='total_bill', y='tip', data=tips)",
+			"val": "Plot two variables with bivariate and univariate graphs."
+		}],
+		"Relational and Regression Plots": [{
+			"key": "sns.scatterplot(x='total_bill', y='tip', data=tips)",
+			"val": "Scatter plot with possibility of several semantic groupings."
+		}, {
+			"key": "sns.regplot(x='total_bill', y='tip', data=tips)",
+			"val": "Scatter plot with a linear regression model fit."
+		}, {
+			"key": "sns.lineplot(x='timepoint', y='signal', data=fmri)",
+			"val": "Line plot with possibility of several semantic groupings."
+		}],
+		"Matrix Plots": [{
+			"key": "sns.heatmap(tips)",
+			"val": "Plot rectangular data as a color-encoded matrix."
+		}, {
+			"key": "sns.clustermap(iris)",
+			"val": "Plot a matrix dataset as a hierarchically-clustered heatmap."
+		}],
+		"Colors": [{
+			"key": "set_palette('Reds')",
+			"val": "Set the color cycle using a palette."
+		}, {	
+			"key": "sns.set_palette('_')",
+			"val": "_ can be of the following: deep, muted, bright, dark, colorblind, pastel, Paired, Spectral, Blues, BuGn, GnBu, OrRd, YlOrRd..."
+		}]
+	}
+}
